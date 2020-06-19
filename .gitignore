@@ -1,3 +1,20 @@
+.DS_Store
+Command_Line_Tools.pkg
+IMAGES/
+Makefile
+SDL2-2.0.12.dmg
+SDL2.framework/
+XQuartz-2.7.11.dmg
+__init__.py
+__pycache__/
+build/
+git-2.27.0.tar.gz
+git-2.27.0/
+make.bat
+python-3.8.3-macosx10.9.pkg
+requirements.txt
+source/
+vPeterRabbit_0.0.1/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
