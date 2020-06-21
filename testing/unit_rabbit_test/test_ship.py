@@ -68,11 +68,11 @@ class Ship(Sprite):
 
 
 #    def donotrun():
-#        """ 
-#        Dummy Stub to prohibit running script 
+#        """
+#        Dummy Stub to prohibit running script
 #        """
 
-#if __name__ == '__main__':
+# if __name__ == '__main__':
 #    donotrun()
-#else:
+# else:
 #    pass

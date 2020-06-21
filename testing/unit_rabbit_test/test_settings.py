@@ -39,7 +39,7 @@ class Settings:
         # fleet_direction of 1 represents right; -1 represents left.
         self.fleet_direction = 1
 
-     # Scoring
+    # Scoring
         self.alien_points = 50
 
     def increase_speed(self):
@@ -51,14 +51,13 @@ class Settings:
         self.alien_points = int(self.alien_points * self.score_scale)
         print(self.alien_points)
 
-
         # self.settings = ai_game.settings
         # print(len(self.bullets))
 
 #    def donotrun():
 #        """ Dummy Stub to prohibit running script """
 
-#if __name__ == '__main__':
+# if __name__ == '__main__':
 #    donotrun()
-#else:
+# else:
 #    pass

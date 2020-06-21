@@ -3,10 +3,9 @@ Alien_Invasion
 """
 
 import sys
-import os.path
+# import os.path
 import pygame
-#from pygame import local *
-
+# from pygame import local *
 from time import sleep
 from settings import Settings
 from game_stats import GameStats
@@ -17,25 +16,28 @@ from bullet import Bullet
 from alien import Alien
 
 # pygame.init()
-#: path = '/Users/markpalie/Library/Python/3.7/lib/python/site-packages/pygame'
+# : path = '/Users/markpalie/Library/Python/3.7/lib/
+# python/site-packages/pygame'
+
 
 class AlienInvasion:
     """
     Overall class to manage game assets and behavior.
     """
+
     def __init__(self):
         """
         Initialize the game, and create class variables.
-        :type self: class function accessable across class 
+        :type self: class function accessable across class
         :param self: class namespace
         """
         pygame.init()
-        """ 
+        """
         Class dependancy = pygame
         """
         self.settings = Settings()
-        #self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
-        #self.screen = pygame.display.set_mode((self.settings.screen_width,
+        # self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+        # self.screen = pygame.display.set_mode((self.settings.screen_width,
         #                                       self.settings.screen_height))
         self.screen = pygame.display.set_mode((1200, 800))
         self.settings.screen_width = self.screen.get_rect().width
@@ -72,11 +74,11 @@ class AlienInvasion:
             self._check_events()
             # print(f"self._check_events() = {self._check_events()}")
             if self.stats.game_active:
-               self.ship.update()
-               self._update_bullets()
-               self._update_aliens()
+                self.ship.update()
+                self._update_bullets()
+                self._update_aliens()
             else:
-               self._check_events()
+                self._check_events()
 #                pass
 #                print("Ships Depleted ---- End Game")
 #                sys.exit()
@@ -105,16 +107,21 @@ class AlienInvasion:
         :param mouse_pos: the position of the mouse
         :meta public:
         """
+
+# 3456789012345678901234567890123456789012345678901234567890123456789012345678
+# -------v---------v---------v---------v---------v---------v---------v-------|
+
         if self.play_button.rect.collidepoint(mouse_pos):
-#            self.stats.game_active = True
+            # self.stats.game_active = True
             button_clicked = self.play_button.rect.collidepoint(mouse_pos)
             print(f"Button Clicked: {button_clicked}")
-            print(f"In condition: if self.play_button.rect.collidepoint(mouse_pos)")
+            print(f"In 'if' condition: self.play_button.rect.collidepoint")
             print(f"Check Play Button State: {self.stats.game_active}")
             if button_clicked and not self.stats.game_active:
                 # Reset the game settings.
                 self.settings.initialize_dynamic_settings()
-                print(f"In condition: if button_clicked and not self.stats.game_active")
+                print(f"In 'if' condition: button_clicked and not \
+                                                     self.stats.game_active")
                 print(f"Check Play Button State: {self.stats.game_active}")
                 """
                 Reset the game statistics.
@@ -140,7 +147,6 @@ class AlienInvasion:
                 Hide the mouse cursor.
                 """
             pygame.mouse.set_visible(False)
-
 
     def _check_keydown_events(self, event):
         # print("Entered _check_keydown_events")
@@ -195,7 +201,7 @@ class AlienInvasion:
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
         self._check_bullet_alien_collisions()
-        #print(len(self.bullets))  # REVIEW CHECK BULLET REMOVAL AT TOP
+        # print(len(self.bullets))  # REVIEW CHECK BULLET REMOVAL AT TOP
 
     def _check_bullet_alien_collisions(self):
         # print("Entered _check_bullet_alien_collisions")
@@ -260,7 +266,7 @@ class AlienInvasion:
         Make an alien.
         """
         alien = Alien(self)
-        self.aliens.add(alien)  #REVIEW
+        self.aliens.add(alien)  # REVIEW
         alien_width, alien_height = alien.rect.size
         available_space_x = self.settings.screen_width - (2 * alien_width)
         number_aliens_x = available_space_x // (2 * alien_width)
@@ -390,9 +396,9 @@ class AlienInvasion:
         pygame.display.flip()
 
 
-#if __name__ == '__main__':
-#    self.donotrun() 
-#else:
+# if __name__ == '__main__':
+#    self.donotrun()
+# else:
 #    pass
 
 if __name__ == '__main__':

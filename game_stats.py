@@ -1,5 +1,6 @@
 import pygame
 
+
 class GameStats:
     """
     Track statistics for Alien Invasion.
@@ -50,4 +51,3 @@ class GameStats:
         Prepare the initial score image.
         """
 #        self.prep_score()
-

@@ -1,6 +1,5 @@
 import pygame
 from pygame.sprite import Sprite
-from pygame import draw
 
 
 class Bullet(Sprite):
